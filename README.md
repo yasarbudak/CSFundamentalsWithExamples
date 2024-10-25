@@ -28,6 +28,10 @@ This repository contains examples of fundamental **Data Structures** and **Algor
    - **ConsolePrinter**: A utility for consistent, formatted console output.
    - **InputOutputHelper**: Helper class for managing user input and output handling.
 
+## Customization Notes
+- Replace the placeholder GitHub link (`https://github.com/your-username/CSharpFundamentalsWithExamples.git`) with your actual repository URL once it's live.
+- Feel free to add any other specific features or adjustments as you develop the project further.
+
 ## How to Run
 
 1. Clone the repository:
