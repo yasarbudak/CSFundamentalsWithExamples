@@ -1,4 +1,5 @@
-﻿using FundamentalsRunner.DataStructures;
+﻿using FundamentalsRunner.Algorithms;
+using FundamentalsRunner.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,10 @@ namespace FundamentalsRunner
         Console.WriteLine("4. Queue Examples");
         Console.WriteLine("5. Tree Examples");
         Console.WriteLine("6. Graph Examples");
+        Console.WriteLine("7. Sorting Algorithms");
+        Console.WriteLine("8. Searching Algorithms");
+        Console.WriteLine("9. Miscellaneous Algorithms");
+        Console.WriteLine("10. Graph Algorithms");
         Console.WriteLine("0. Exit");
         Console.Write("Enter your choice: ");
 
@@ -45,6 +50,18 @@ namespace FundamentalsRunner
             break;
           case "6":
             RunGraphs.Execute();
+            break;
+          case "7":
+            RunSorting.Execute();
+            break;
+          case "8":
+            RunSearching.Execute();
+            break;
+          case "9":
+            RunMiscellaneous.Execute();
+            break;
+          case "10":
+            RunGraphAlgorithms.Execute();
             break;
           case "0":
             Console.WriteLine("Exiting...");
