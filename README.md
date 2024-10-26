@@ -1,58 +1,87 @@
 # CSharpFundamentalsWithExamples
 
-## Project Overview
-
-This repository contains examples of fundamental **Data Structures** and **Algorithms** implemented in **C#**. The project is organized into different categories such as Arrays, Linked Lists, Stacks, Queues, Trees, Sorting Algorithms, and Searching Algorithms. Each category includes both the core logic and executable examples that can be run via a console application.
+This project, **CSharpFundamentalsWithExamples**, provides an in-depth exploration of fundamental data structures and algorithms using C#. It includes examples for understanding basic to advanced concepts, with a focus on improving algorithmic thinking and hands-on coding practice. 
 
 ## Project Structure
 
-### 1. **Algorithms (Class Library)**
-   - **Sorting**: Contains various sorting algorithms such as Bubble Sort, Merge Sort, Quick Sort, etc.
-   - **Searching**: Implements searching algorithms like Linear Search, Binary Search, etc.
-   - **Miscellaneous**: Other common algorithms like Greatest Common Divisor (GCD), Fibonacci, etc.
+The project is organized into distinct sections based on the type of data structure or algorithm:
 
-### 2. **DataStructures (Class Library)**
-   - **Arrays**: Examples of common array operations, such as reversing arrays, finding min/max, etc.
-   - **Linked Lists**: Singly and doubly linked list operations and examples.
-   - **StacksAndQueues**: Stack and queue operations with implementations using arrays and linked lists.
-   - **TreesAndGraphs**: Binary trees, binary search trees, and graph algorithms.
+### 1. Data Structures
+- **Arrays** - Basic operations on arrays, including iteration, insertion, and deletion.
+- **Linked Lists** - Implementation of singly and doubly linked lists.
+- **Stacks** - LIFO data structure with operations like push, pop, and peek.
+- **Queues** - FIFO data structure with enqueue and dequeue operations.
+- **Trees** - Binary trees and traversal techniques (preorder, inorder, and postorder).
+- **Graphs** - Basic graph operations and adjacency list representation.
 
-### 3. **FundamentalsRunner (Console Application)**
-   This is the central console application used to run and test all the data structure and algorithm examples from the class libraries. It provides an easy-to-use interface to choose and execute different examples.
+### 2. Algorithms
+- **Sorting Algorithms**:
+  - Basic Sorting: Bubble Sort, Selection Sort, and Insertion Sort.
+  - Advanced Sorting: Merge Sort, Quick Sort, and Heap Sort.
+- **Searching Algorithms**:
+  - Linear Search, Binary Search.
+  - Graph Search: Breadth-First Search (BFS) and Depth-First Search (DFS).
+- **Graph Algorithms**:
+  - Shortest Path: Dijkstra’s Algorithm, Bellman-Ford Algorithm.
+  - Minimum Spanning Tree: Kruskal’s Algorithm, Prim’s Algorithm.
+- **Miscellaneous Algorithms**:
+  - Factorial Calculation, Fibonacci Sequence.
+  - Dynamic Programming: Knapsack Problem, Longest Common Subsequence (LCS).
 
-   - **RunAlgorithms**: Runs the algorithm examples.
-   - **RunDataStructures**: Runs the data structure examples.
-   - **Utilities**: Helper classes for input/output formatting and handling.
+## Installation
 
-### 4. **Utilities (Class Library)**
-   - **ConsolePrinter**: A utility for consistent, formatted console output.
-   - **InputOutputHelper**: Helper class for managing user input and output handling.
-
-## Customization Notes
-- Replace the placeholder GitHub link (`https://github.com/your-username/CSharpFundamentalsWithExamples.git`) with your actual repository URL once it's live.
-- Feel free to add any other specific features or adjustments as you develop the project further.
-
-## How to Run
-
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/CSharpFundamentalsWithExamples.git
-Open the solution in Visual Studio.
+   git clone https://github.com/yasarbudak/CSharpFundamentalsWithExamples.git
+2.	Navigate to the project directory:
+bash
+Copy code
+cd CSharpFundamentalsWithExamples
+3.	Open the project in Visual Studio or your preferred C# IDE.
+Usage
+Each data structure and algorithm has been implemented as a separate class and is callable through the ExampleRunner class, which provides a menu for running various examples.
+1.	Run the ExampleRunner: Execute the ExampleRunner to view the available options.
+2.	Select a data structure or algorithm: Follow the prompts to choose an example and see the outputs of each operation.
+Sample Code Usage
+Example: Running Bubble Sort
+csharp
+Copy code
+using Algorithms.Sorting.BasicSorting;
 
-Build the solution to ensure all projects are compiled correctly.
+int[] array = { 64, 34, 25, 12, 22, 11, 90 };
+BubbleSort.Sort(array);
 
-Set FundamentalsRunner as the startup project.
+foreach (int item in array)
+{
+    Console.Write(item + " ");
+}
+Example: Finding Shortest Path with Dijkstra’s Algorithm
+csharp
+Copy code
+using Algorithms.GraphAlgorithms.ShortestPath;
 
-Run the application and select from the menu to explore various data structures and algorithms.
+var graph = new Dictionary<int, List<(int, int)>>
+{
+    { 0, new List<(int, int)> { (1, 4), (2, 1) } },
+    { 1, new List<(int, int)> { (3, 1) } },
+    { 2, new List<(int, int)> { (1, 2), (3, 5) } },
+    { 3, new List<(int, int)>() }
+};
 
-Features
-Organized examples of various data structures and algorithms.
-Modular structure with separate Class Libraries for logic and Console Application for testing.
-Utilities to assist with input/output operations.
-Ideal for beginners and interview preparation.
-Future Enhancements
-Adding more advanced data structures like heaps and tries.
-Extending algorithm coverage to include dynamic programming and greedy algorithms.
-Adding unit tests for each algorithm and data structure.
-Contribution
-Contributions are welcome! Please fork the repository and create a pull request with any enhancements or bug fixes.
+var result = Dijkstra.FindShortestPath(graph, 0);
+foreach (var (node, distance) in result)
+{
+    Console.WriteLine($"Distance from node 0 to node {node}: {distance}");
+}
+
+## Contributing
+Contributions are welcome! If you have suggestions for additional examples or improvements, please feel free to fork the repository and submit a pull request.
+1.	Fork the repository.
+2.	Create a new branch for your feature (git checkout -b feature/AmazingFeature).
+3.	Commit your changes (git commit -m 'Add some AmazingFeature').
+4.	Push to the branch (git push origin feature/AmazingFeature).
+5.	Open a pull request.
+    
+## License
+Distributed under the MIT License. See LICENSE for more information.
+
